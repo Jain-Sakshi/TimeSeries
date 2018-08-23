@@ -1,0 +1,36 @@
+1.	Chi square test for independence:
+Chi square test for independence is used for checking whether two variables have a relation or not. 
+The smaller the value, the more your observed data fits the expected data (and vice versa).
+
+2.	P value:
+P value is the probability the data being random (not related).
+It is used for rejecting a null hypothesis – smaller the value, greater the rejection evidence for the null hypothesis.
+
+How?
+We want to prove that two variables have a relationship – there the null hypothesis will state that they don’t. The p value is giving the probability of randomness between the two variables, hence the smaller the value, lesser is the randomness, greater is the relation, and weaker the null hypothesis.
+
+A null hypothesis with p value lesser than the Alpha level would be rejected, greater would be accepted.
+
+3.	Alpha and Beta level:
+Alpha level is the probability of the null hypothesis being rejected when it’s true (i.e. probability of False Positive/Type I error). 
+	Alpha level = 1 – Confidence level	(for one tailed test)
+	Alpha level = (1 – Confidence level)/2	(for two tailed test)
+
+Where would you use a two tailed or a one tailed test?
+If your null hypothesis is to prove something ‘equal to’, then use a two tailed test (for finding ‘greater than’ and ‘lesser than’ areas, hence two tails). If it’s phrased as ‘greater than’ or ‘lesser than’, then it will be a one tailed test).
+
+Beta level is the possibility of the alternate hypothesis being rejected when it’s true (i.e. probability of False Negative/Type II error). It is directly related to the power of a test.
+
+4.	Power:
+The probability of not making a Type II error (False Negative).
+
+5.	Confidence level:
+Confidence level is the percentage of how similar your results would be if repeated for a different sample of the population. The opposite of confidence is the alpha level, i.e. percentage of false positives.
+
+Statistical Significance:
+It’s a measure of how meaningful your results are, i.e. how close your results would be to the actual population.
+
+6.	Z Table
+A Z table tells us the percentage of results which between a range of a normal curve. There are two types of Z tables:
+a.	Right Z Table (for the right tail)
+b.	Left Z Table	(for the left tail)
