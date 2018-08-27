@@ -1,0 +1,82 @@
+1.	Rolling and Expanding window
+  a.	Rolling window
+  b.	Expanding window
+  c.	Moving average
+  d.	Weighed Moving Average
+  e.	Exponential weighed moving average
+
+2.	Self
+  a.	Self-correlation
+    i.	Auto correlation
+      1.	Lag correlation
+    ii.	Partial Auto correlation
+      1.	Partial correlation is the degree of associativity between two variables, with other controlling variables (eg: confounding variables) constrained.
+      2.	PAC is the partial correlation of a time series with its own lagged values
+      3.	In ARIMA, it is used to determine the value of ‘p’ for Auto Regressor part of the model
+    iii.	Stattools
+    iv.	Pre-prediction munging and stationarity
+      1.	Condition for stationarity – Constant mean, variance, and autocorrelation
+      2.	Detrending data
+        a.	Remove trends and seasonality
+          i.	Removing trends
+            1.	Local Smoothing
+            2.	Linear Regression
+          ii.	Seasonality
+            1.	Additive and multiplicative
+            2.	Removal
+              a.	Simplest – average detrended values for specific season
+              b.	Loess method (locally weighed scatterplot smoothing)
+        b.	Increasing variance
+          i.	Power transformation
+          ii.	Log transformation
+        c.	Dealing with varying autocorrelation – don’t (depends on your process)
+        d.	Dickey-Fuller test for Stationarity
+3.	Forecasting
+  a.	ARIMA models
+    i.	Moving Average Process
+      1.	Implies a value is oscillating around the mean (with previous error terms)
+      2.	y(t)  = mean + e(t) + theta_1 * e(t-1) + … + theta _q * e(t-q)
+      3.	known as MP(q) model
+    ii.	Autoregressive Models
+      1.	The current value is dependent on previous values and its error term (et)
+      2.	y(t) = mean + phi_1 * y(t-1) + .. + phi_p * y(t-p) + e(t)
+      3.	known as AR(p) model
+      4.	variance of e(t) will only change scale, not patterns
+      5.	any AR(p) equation can be written as an MA(∞) equation . An invertible MA(q) equation can be written as an AR(∞) equation (constraint is |theta| < 1).
+    iii.	I (Integrated)
+      1.	I is for first differencing 
+    iv.	ARIMA Model (aka Box-Jenkins)
+      1.	The most general class of models for forecasting a time series which can be made stationary
+      2.	Properties
+        a.	Statistical properties (mean, variance) constant over time
+        b.	‘short term random time patterns always look the same in statistical sense ’
+        c.	Autocorrelation function and power spectrum remain constant over time
+          i.	Power spectrum: Fourier Transform of autocorrelation of a stationary time series (A Fourier transform decomposes a series into its constituent frequencies).
+        d.	Can do nonlinear transformations to get  ( c ) (but have to be monotonic)
+        e.	Extrapolate signal for forecast
+      3.	Implementing an appropriate ARIMA model
+        a.	ACF – MA model diagnostics
+        b.  PACF – AR model diagnostics
+      4.	Limitations
+        a.	Farther the future prediction time, greater the error bands
+        b.	Using high order equations to narrow error bands can lead to overfitting
+    v.	Dickey-Fuller test
+      1.	Test to check for stationarity
+      2.	Is a type of unit root test
+        a.	Unit root test determines the unit root
+        b.	A unit root is a feature of a stochastic process. A linear stochastic process has one.
+          i.	If unit root of characteristic equation == 1 => non-stationary, may or may not have trend
+          ii.	If modulus of unit root of characteristic equation < 1 => first difference of process will be stationary, no trend. 
+          iii.	One can make process stationary by differencing it multiple times
+    vi.	Ljung Box Q test
+      1.	Statistical test for testing overall autocorrelation (and not just for one time lag) i.e. from k lags to 0.
+  b.	Clustering and classification
+    i.	Distance metric and DTW
+      1.	Distance metric : cannot use normal distance methods
+      2.	Distance Time Warping : find the closest point in ts2 for every point in ts1 and then compute distance
+        a.	DTW based clustering
+        b.	DTW based nearest neighbor
+      3.	Clustering based on features
+          Eg: first local maxima, local maxima to absolute maxima distance, 
+b.	Self-explanation
+c.	Self-Prediction
