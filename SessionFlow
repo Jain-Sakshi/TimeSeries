@@ -1,0 +1,28 @@
+Session Flow:
+1.	Time Series Intro
+2.	Manipulating dates
+3.	Rolling and Expanding Window
+4.	Self-Correlation, Self-Explanation, Self-Prediction
+5.	ACF (Autocorrelation Function), PACF (Partial Autocorrelation Function)
+6.	Stattools library
+7.	Stationarity
+  a.	What is Stationarity
+  b.	Seasonality and Trends
+  c.	Why remove Seasonality and Trends
+8.	Pre prediction munging 
+  a.	Condition for stationarity
+  b.	Detrending Data
+    i.	Remove Trend and Seasonality
+    ii.	Increasing Variance
+  c.	Dealing with varying correlation – don’t
+  d.	Dickey – Fuller test
+9.	Forecasting
+  a.	ARIMA = AR + I + MA
+    i.	In I – why difference?
+  b.	Implementing an appropriate ARIMA model
+    i.	ACF – MA model diagnostics
+    ii.	PACF – AR model diagnostics
+  c.	Limitations
+    i.	SARIMA
+10.	Classification
+  a.	(if time) clustering based on features
