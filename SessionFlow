@@ -26,3 +26,14 @@ Session Flow:
     i.	SARIMA
 10.	Classification
   a.	(if time) clustering based on features
+
+Misc:
+//Additivity issue in analysis of variance (Stata, ANOVA, oneway, etc)
+//SARIMA
+//Feature Selection for Time Series
+Vector Auto Regression – regularly sampled data of many times [statsmodels]
+Kalman filters (and other signal processing) [rabble, filterpy, pykalman]
+	Kalman filters, Bayesian filter methods
+Hidden Markov Models [hmmlearn]
+RNN [theano]
+More resources at {video – 3:11:01}
