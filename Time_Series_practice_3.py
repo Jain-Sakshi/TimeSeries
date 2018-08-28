@@ -12,8 +12,8 @@ import matplotlib.pylab as plt
 from statsmodels.tsa import stattools
 
 #Reading dataset
-stock_data = pd.read_csv('D:\\Datasets\\Yahoo_Stocks\\22_Aug_17_to_18.csv')
-passenger_data = pd.read_csv('D:\\Datasets\\AirPassengers\\AirPassengers.csv')
+stock_data = pd.read_csv('D:\\Time_Series\\Datasets\\Yahoo_Stocks\\22_Aug_17_to_18.csv')
+passenger_data = pd.read_csv('D:\\Time_Series\\Datasets\\AirPassengers\\AirPassengers.csv')
 
 #Autocorrelation - noise
 grid = np.linspace(0,720,500)
